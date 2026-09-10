@@ -1,8 +1,18 @@
-# Text → Image Letters · 布艺字母交互模板
+# Text → Image Letters · 通用字母图片交互模板
 
 可复用的全屏作品集首页：文字在悬停、触摸和随机播放时变成图片，邻字轻微让位，离开后弹性退场。使用原生 HTML、CSS、JavaScript，无依赖、无需构建。
 
-附带 **22 张原创生成的透明布艺素材**：11 个字母位置各有 A/B 两种造型，重复字符也使用不同元素。题材包括牛仔拼接、织唛、刺绣、毛毡缝线、编绳和叠层吊牌。
+输入自己的标题，让 Codex 按字符位置设计并生成对应图片，再接入现有交互。风格与题材开放，核心是**有想象力，而且不同图片之间要有真正的风格差异**。
+
+仓库附带的 22 张布艺图片只是可运行的示例，不是模板的风格限制。自己的标题有 N 个非空格字符位置，就制作 2N 张图片；重复字母也独立设计。
+
+## 让 Codex 定制你的版本
+
+创建自己的仓库并在 Codex 中打开，然后发送：
+
+> 请将这个模板的标题改为「你的标题」。先阅读 AGENTS.md 和 docs/MATERIALS.md，按我的每个非空格字符位置设计两种图片，重复字母使用不同元素。运用多种视觉语言，避免统一成一套 3D 图标。使用图像生成工具制作透明素材，检查字母可辨认、完整轮廓与小尺寸效果，压缩为 WebP，更新 config.js、网页标题和简介，并记录每张素材的构思与完整提示词。完成后运行检查并提供预览。
+
+详细流程见 [素材设计与制作指南](docs/MATERIALS.md)。生成在 Codex 中完成，网页自身不调用图像生成接口。
 
 ## 快速开始
 
@@ -49,7 +59,7 @@ window.LETTER_CONFIG = {
 - style.css / index.html：样式与结构
 - assets/：22 张透明 WebP，总量约 1.98 MB
 - docs/MATERIALS.md：素材制作方法与设计规则
-- docs/materials.json：每张完整提示词、位置、文件名和说明
+- docs/materials.json：内置布艺示例的完整提示词、位置、文件名和说明
 - scripts/validate.mjs：配置与素材基础检查
 
 ## 验证
@@ -67,4 +77,4 @@ node scripts/validate.mjs
 
 ---
 
-**English:** A dependency-free, configurable text-to-image portfolio hero with hover/touch interaction, randomized image variants, elastic transitions, and 22 transparent textile assets. Edit config.js, replace assets/, and open index.html. Full generation prompts and workflow are included in docs/. MIT licensed.
+**English:** A dependency-free, configurable text-to-image portfolio hero with hover/touch interaction, randomized image variants, elastic transitions, and 22 sample textile assets and an open-ended mixed-media generation workflow. Edit config.js, replace assets/, and open index.html. Full generation prompts and workflow are included in docs/. MIT licensed.
